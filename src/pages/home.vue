@@ -54,14 +54,17 @@ export default {
 
 <style scoped>
 .wrap {
-  width: 100%;
-  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
   background: rgb(0, 25, 54);
   padding: 20px;
   color: #fff;
   box-sizing: border-box;
   display: flex;
-  overflow: scroll;
+  overflow: auto;
 }
 #particles-js {
   top: 0;
