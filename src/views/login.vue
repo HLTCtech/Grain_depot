@@ -3,7 +3,7 @@
     <div class="header-content">
       <div class="logo-part">
         <img src="../assets/logo.png" width="30" height="30">
-        <span>车车综合管理</span>
+        <span>智能粮库管理平台</span>
       </div>
     </div>
     <el-form ref="AccountForm" :model="account" :rules="rules" label-position="left" label-width="0px"

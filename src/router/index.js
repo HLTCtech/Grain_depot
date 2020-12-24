@@ -19,6 +19,10 @@ import VehicleManage from '@/views/vehicle/index.vue'
 import DeptManager from '@/views/dept/index.vue'
 import NotFound from '@/components/404.vue'
 
+//粮库模块
+import TemperatureControl from '@/views/temperatureControl/index.vue'
+import Cockpit from "@/pages/home.vue"
+
 // 懒加载方式，当路由被访问的时候才加载对应组件
 const Login = resolve => require(['@/views/login'], resolve)
 
@@ -36,22 +40,50 @@ let router = new Router({
       component: NotFound
     },
     {
+      path: '/openNewWindow',
+      component: Cockpit
+    },
+    {
       path: '/',
       type: 'home',
       name: 'home',
-      redirect: '/dashboard',
+      redirect: '/temperaturecontrol',
       component: Home,
       children: [
         {
-          path: '/dashboard',
-          name: '首页',
+          path: '/cockpit',
+          name: '粮情驾驶仓',
+          components: {
+            default: NotFound,
+            top: TopNav,
+            aside: LeftNav
+          },
+          leaf: true, // 只有一个节点
+          iconCls: 'el-icon-menu', // 图标样式class
+          menuShow: true
+        },
+        {
+          path: '/temperaturecontrol',
+          name: '智能温控',
+          components: {
+            default: TemperatureControl,
+            top: TopNav,
+            aside: LeftNav
+          },
+          leaf: true, // 只有一个节点
+          iconCls: 'el-icon-menu', // 图标样式class
+          menuShow: true
+        },
+        {
+          path: '/dashboa',
+          name: '保管员工作台',
           components: {
             default: Dashboard,
             top: TopNav,
             aside: LeftNav
           },
           leaf: true, // 只有一个节点
-          iconCls: 'iconfont icon-home', // 图标样式class
+          iconCls: 'el-icon-menu', // 图标样式class
           menuShow: true
         },
         {
@@ -61,15 +93,82 @@ let router = new Router({
             top: TopNav,
             aside: LeftNav
           },
-          name: '我的设置',
+          name: '仓储基本信息',
           iconCls: 'el-icon-menu',
           menuShow: true,
           children: [
-            { path: '/mySet/plan', component: Plan, name: '行程计划', menuShow: true },
-            { path: '/mySet/mission', component: Mission, name: '我的任务', menuShow: true },
-            { path: '/mySet/maillist', component: Maillist, name: '通讯录', menuShow: true }
+            {path: '/mySet/plan', component: Plan, name: '仓房货位', menuShow: true},
+            {path: '/mySet/mission', component: Mission, name: '预警策略', menuShow: true},
+            {path: '/mySet/maillist', component: Maillist, name: '定时检测设置', menuShow: true},
+            {path: '*', component: NotFound, name: '粮情数据同步配置', menuShow: true},
+            {path: '*', component: NotFound, name: '设备配置', menuShow: true},
+            {path: '*', component: NotFound, name: '气象站配置', menuShow: true},
           ]
-        }
+        },
+        {
+          path: '/dashb',
+          name: '仓储作业',
+          components: {
+            default: Dashboard,
+            top: TopNav,
+            aside: LeftNav
+          },
+          iconCls: 'el-icon-menu', // 图标样式class
+          menuShow: true,
+          children: [
+            {path: '*', component: NotFound, name: '粮情检测薄', menuShow: true},
+            {path: '*', component: NotFound, name: '通风控制', menuShow: true},
+          ]
+        },
+        {
+          path: '/das',
+          name: '库内气象站',
+          components: {
+            default: Dashboard,
+            top: TopNav,
+            aside: LeftNav
+          },
+          iconCls: 'el-icon-menu', // 图标样式class
+          menuShow: true,
+          children: [
+            {path: '*', component: NotFound, name: '实时气象', menuShow: true},
+            {path: '*', component: NotFound, name: '历史气象', menuShow: true},
+          ]
+        },
+        {
+          path: '/dashafasdfaoa',
+          name: '智能粮情',
+          components: {
+            default: Dashboard,
+            top: TopNav,
+            aside: LeftNav
+          },
+          iconCls: 'el-icon-menu', // 图标样式class
+          menuShow: true,
+          children: [
+            {path: '*', component: NotFound, name: '粮情测控', menuShow: true},
+            {path: '*', component: NotFound, name: '气体浓度检测', menuShow: true},
+            {path: '*', component: NotFound, name: '虫情检测', menuShow: true},
+            {path: '*', component: NotFound, name: '气体浓度检测信息查询', menuShow: true},
+            {path: '*', component: NotFound, name: '虫情检测信息查询', menuShow: true},
+            {path: '*', component: NotFound, name: '粮情数据查询', menuShow: true},
+          ]
+        },
+        {
+          path: '/dasdsadhboa',
+          name: '智能通风',
+          components: {
+            default: Dashboard,
+            top: TopNav,
+            aside: LeftNav
+          },
+          iconCls: 'el-icon-menu', // 图标样式class
+          menuShow: true,
+          children: [
+            {path: '*', component: NotFound, name: '通风方案设置', menuShow: true},
+            {path: '*', component: NotFound, name: '通风控制', menuShow: true},
+          ]
+        },
       ]
     },
     {
@@ -144,7 +243,7 @@ let router = new Router({
           components: {
             default: VehicleManage,
             top: TopNav,
-            aside:  LeftNav
+            aside: LeftNav
           },
           leaf: true, // 只有一个节点
           iconCls: 'iconfont icon-home', // 图标样式class
@@ -166,7 +265,7 @@ let router = new Router({
           components: {
             default: DeptManager,
             top: TopNav,
-            aside:  LeftNav
+            aside: LeftNav
           },
           leaf: true, // 只有一个节点
           iconCls: 'iconfont icon-home', // 图标样式class

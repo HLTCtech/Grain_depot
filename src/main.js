@@ -4,17 +4,21 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import ElementUI from 'element-ui'
-
+import echarts from 'echarts'
 import store from './store.js'
 import 'element-ui/lib/theme-chalk/index.css'
 import '@/assets/iconfont.css'
 import '@/assets/css/style.css'
+import hFrame from './components/h-frame'
+import hTitle from './components/h-title'
 
+Vue.prototype.$echarts = echarts
 Vue.config.productionTip = false
 Vue.use(ElementUI)
-
+Vue.component('h-frame', hFrame)
+Vue.component('h-title', hTitle)
 Vue.component('footer-copyright', {
-  template: '<p class="footer-msg">©CopyRight 2016-2018 车车科技发展有限公司 版权所有 <a href="http://www.miibeian.gov.cn" target="_blank">粤ICP备******号</a></p>'
+  template: '<p class="footer-msg"><a href="http://www.miibeian.gov.cn" target="_blank">粤ICP备******号</a></p>'
 });
 
 Vue.filter('formatDateTime', function (value) {

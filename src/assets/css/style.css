@@ -33,7 +33,7 @@ ul {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
-  margin-top: 60px;
+  /*margin-top: 60px;*/
 }
 
 .pull-left {
@@ -55,7 +55,7 @@ ul {
 .container .topbar-wrap {
   height: 50px;
   line-height: 50px;
-  background: #373d41;
+  background: #00C1DE;
   padding: 0px;
 }
 
@@ -86,7 +86,7 @@ ul {
   float: left;
   text-align: left;
   padding-left: 10px;
-  border-left: 1px solid #000;
+  /*border-left: 1px solid #000;*/
 }
 
 .topbar-title .el-menu--horizontal {
@@ -154,7 +154,7 @@ ul {
 /* left sidebar style start */
 .container aside {
   min-width: 50px;
-  background: #333744;
+  /*background: #333744;*/
 }
 
 .container aside::-webkit-scrollbar {
@@ -174,7 +174,7 @@ ul {
 }
 
 aside .el-menu-item, aside .el-submenu__title {
-  color: #fff;
+  color: #333;
   text-align: left;
 }
 
@@ -183,7 +183,7 @@ aside .el-menu-item:hover, aside .el-submenu .el-menu-item:hover, aside .el-subm
 }
 
 aside .el-submenu .el-menu-item {
-  background-color: #333744;
+  background-color: #eeeeee;
 }
 
 aside .el-submenu .el-menu-item:hover {
@@ -205,7 +205,7 @@ aside .el-submenu .el-menu-item.is-active:hover, aside .el-menu-item.is-active:h
   height: 100%; /*写给不支持calc()的浏览器*/
   height: calc(100% - 80px);
   border-radius: 0px;
-  background-color: #333744;
+  background-color: white;
   border-right: 0px;
 }
 
