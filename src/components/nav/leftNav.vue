@@ -12,7 +12,7 @@
         <!-- 注意：这里就是leftNavState状态作用之处，当该值与router的根路由的name相等时加载相应菜单组 -->
         <template v-if="issue.name === $store.state.leftNavState">
           <template v-for="(item,index) in issue.children">
-            <el-submenu v-if="!item.leaf" :index="index+''" v-show="item.menuShow" @select=''>
+            <el-submenu v-if="!item.leaf" :index="index+''" v-show="item.menuShow">
               <template slot="title"><i :class="item.iconCls"></i><span slot="title">{{ item.name }}</span></template>
               <el-menu-item v-for="term in item.children" :key="term.path" :index="term.path" v-if="term.menuShow"
                             :class="$route.path===term.path?'is-active':''">

@@ -87,7 +87,7 @@ let router = new Router({
           menuShow: true
         },
         {
-          path: '/mySet',
+          path: '/dasdasddsad',
           components: {
             default: MySettings,
             top: TopNav,

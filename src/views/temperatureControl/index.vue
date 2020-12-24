@@ -6,39 +6,39 @@
       <div class="choose-Warehouse">
         <div class="warehouse-wrap">
           <img class="warehouse-img" src="@/assets/images/气温图.png" width="50" height="50" alt="">
-          <span class="warehouse-num">24</span>
+          <span class="warehouse-num">1</span>
         </div>
         <div class="warehouse-wrap">
           <img class="warehouse-img" src="@/assets/images/气温图.png" width="50" height="50" alt="">
-          <span class="warehouse-num">24</span>
+          <span class="warehouse-num">2</span>
         </div>
         <div class="warehouse-wrap">
           <img class="warehouse-img" src="@/assets/images/气温图.png" width="50" height="50" alt="">
-          <span class="warehouse-num">24</span>
+          <span class="warehouse-num">3</span>
         </div>
         <div class="warehouse-wrap">
           <img class="warehouse-img" src="@/assets/images/气温图.png" width="50" height="50" alt="">
-          <span class="warehouse-num">24</span>
+          <span class="warehouse-num">4</span>
         </div>
         <div class="warehouse-wrap">
           <img class="warehouse-img" src="@/assets/images/气温图.png" width="50" height="50" alt="">
-          <span class="warehouse-num">24</span>
+          <span class="warehouse-num">5</span>
         </div>
         <div class="warehouse-wrap active">
           <img class="warehouse-img" src="@/assets/images/气温图.png" width="50" height="50" alt="">
-          <span class="warehouse-num">24</span>
+          <span class="warehouse-num">6</span>
         </div>
         <div class="warehouse-wrap">
           <img class="warehouse-img" src="@/assets/images/气温图.png" width="50" height="50" alt="">
-          <span class="warehouse-num">24</span>
+          <span class="warehouse-num">7</span>
         </div>
         <div class="warehouse-wrap">
           <img class="warehouse-img" src="@/assets/images/气温图.png" width="50" height="50" alt="">
-          <span class="warehouse-num">24</span>
+          <span class="warehouse-num">8</span>
         </div>
         <div class="warehouse-wrap">
           <img class="warehouse-img" src="@/assets/images/气温图.png" width="50" height="50" alt="">
-          <span class="warehouse-num">24</span>
+          <span class="warehouse-num">9</span>
         </div>
       </div>
     </el-aside>
@@ -672,5 +672,10 @@ export default {
 .temperature-data {
   margin-bottom: 50px;
   margin-left: 20px;
+}
+.el-button:focus, .el-button:hover{
+  color: white;
+  border-color: #2a6496;
+  background-color: #2a6496;
 }
 </style>
