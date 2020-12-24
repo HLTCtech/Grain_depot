@@ -61,6 +61,7 @@ export default {
   color: #fff;
   box-sizing: border-box;
   display: flex;
+  overflow: scroll;
 }
 #particles-js {
   top: 0;
