@@ -639,6 +639,7 @@ export default {
   align-items: flex-end;
   justify-content: flex-start;
   position: relative;
+  min-width: 680px;
 }
 
 .hierarchy-box {
@@ -665,11 +666,11 @@ export default {
   background: #409EFF;
   text-align: center;
   border-radius: 5px;
-  margin-right: 10px;
+  margin-right: 5px;
 }
 
 .temperature-data {
   margin-bottom: 50px;
-  margin-left: 30px;
+  margin-left: 20px;
 }
 </style>

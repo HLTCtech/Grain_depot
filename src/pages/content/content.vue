@@ -12,7 +12,7 @@
           {{ item }}
         </h-frame>
       </div>
-      <div class="user">管理员李安芳</div>
+      <div class="user">管理员崔凯航</div>
     </div>
     <div class="content">
       <food-stuff v-show="thisIndex === '粮情测控'"></food-stuff>

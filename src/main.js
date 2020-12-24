@@ -17,9 +17,6 @@ Vue.config.productionTip = false
 Vue.use(ElementUI)
 Vue.component('h-frame', hFrame)
 Vue.component('h-title', hTitle)
-Vue.component('footer-copyright', {
-  template: '<p class="footer-msg"><a href="http://www.miibeian.gov.cn" target="_blank">粤ICP备******号</a></p>'
-});
 
 Vue.filter('formatDateTime', function (value) {
   if (!value) return ''

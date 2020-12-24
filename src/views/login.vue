@@ -2,7 +2,7 @@
   <div>
     <div class="header-content">
       <div class="logo-part">
-        <img src="../assets/logo.png" width="30" height="30">
+        <img src="../assets/logo.png" width="80" height="80">
         <span>智能粮库管理平台</span>
       </div>
     </div>
@@ -24,9 +24,6 @@
         <el-button type="primary" style="width:100%;" @click.native.prevent="handleLogin" :disabled="allowLogin" :loading="loading">登录</el-button>
       </el-form-item>
     </el-form>
-	<div class="footer">
-      <footer-copyright></footer-copyright>
-    </div>
   </div>
 </template>
 <script>
@@ -122,7 +119,7 @@
     position: fixed;
     top: 0;
     width: 100%;
-    height: 50px;
+    height: 90px;
     padding: 6px 0;
     border-bottom: 1px solid #ddd;
     box-shadow: 0 0 2px #ddd;
